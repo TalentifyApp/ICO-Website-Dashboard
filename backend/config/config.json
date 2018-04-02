@@ -1,0 +1,35 @@
+{
+  "version":"development",
+  "development": {
+    "username": "root",
+    "password": "dictator@@@123",
+    "database": "DiscoverBlockChain",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "token":"SeLen24356Mtt",
+    "email":{
+      "email":"info@discoverblockchain.io",
+      "password":"Blockchain-1.2",
+      "port":"587",
+      "host":"smtp.gmail.com",
+      "secure":false,
+      "blacklisted":[]
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": "dictator@@@123",
+    "database": "DiscoverBlockChain",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "token":"SeLen24356Mtt"
+  },
+  "production": {
+    "username": "root",
+    "password": "dictator@@@123",
+    "database": "DiscoverBlockChain",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "token":"SeLen24356Mtt"
+  }
+}

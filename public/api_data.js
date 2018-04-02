@@ -1,6 +1,6 @@
 define({ "api": [
   {
-    "type": "post",
+    "type": "get",
     "url": "/auth/confirm",
     "title": "",
     "name": "Confirm_Registration",
@@ -21,15 +21,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "otp",
-            "description": "<p>Otp Information sent to user</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "email",
-            "description": "<p>email address of the user</p>"
+            "field": "token",
+            "description": "<p>Encrypted identifier sent to user</p>"
           }
         ]
       }
@@ -41,15 +34,8 @@ define({ "api": [
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "otp",
-            "description": "<p>OTP of the user</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "email",
-            "description": "<p>Email of the user</p>"
+            "field": "token",
+            "description": "<p>Token of the user</p>"
           }
         ]
       },
@@ -84,7 +70,7 @@ define({ "api": [
     "groupTitle": "Authentication",
     "sampleRequest": [
       {
-        "url": "http://disoverblockchain.io:9488/v1/auth/confirm"
+        "url": "http://discoverblockchain.io:9488/v1/auth/confirm"
       }
     ]
   },
@@ -180,7 +166,7 @@ define({ "api": [
     "groupTitle": "Authentication",
     "sampleRequest": [
       {
-        "url": "http://disoverblockchain.io:9488/v1/auth/login"
+        "url": "http://discoverblockchain.io:9488/v1/auth/login"
       }
     ]
   },
@@ -367,13 +353,13 @@ define({ "api": [
     "groupTitle": "Authentication",
     "sampleRequest": [
       {
-        "url": "http://disoverblockchain.io:9488/v1/auth/register"
+        "url": "http://discoverblockchain.io:9488/v1/auth/register"
       }
     ]
   },
   {
     "type": "post",
-    "url": "/auth/sendConfirmation",
+    "url": "/auth/sendconfirmation",
     "title": "",
     "name": "Send_Confirmation",
     "version": "0.0.1",
@@ -395,13 +381,6 @@ define({ "api": [
             "optional": false,
             "field": "email",
             "description": "<p>email address of the user</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "reason",
-            "description": "<p>Reason for confirmation</p>"
           }
         ]
       }
@@ -415,13 +394,6 @@ define({ "api": [
             "optional": false,
             "field": "email",
             "description": "<p>Email of the user</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "reason",
-            "description": "<p>Reason for confirmation</p>"
           }
         ]
       },
@@ -456,7 +428,7 @@ define({ "api": [
     "groupTitle": "Authentication",
     "sampleRequest": [
       {
-        "url": "http://disoverblockchain.io:9488/v1/auth/sendConfirmation"
+        "url": "http://discoverblockchain.io:9488/v1/auth/sendconfirmation"
       }
     ]
   }

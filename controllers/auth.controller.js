@@ -233,7 +233,7 @@ const version=1;
        ctx.body=responseBody;
     },
     /**
-     * @api {post} /auth/sendConfirmation
+     * @api {post} /auth/sendconfirmation
      * @apiName Send Confirmation
      * @apiVersion 0.0.1
      * @apiGroup Authentication
@@ -242,7 +242,6 @@ const version=1;
      * @apiExample {curl} usage:
      *          curl -i https://discoverblockchain.io:9844/v1/auth/sendConfirmation
      * @apiParam {String} email email address of the user
-     * @apiParam {Number} reason Reason for confirmation
      *
      *
      * @apiSuccess {String} email Email of the user
@@ -269,7 +268,11 @@ const version=1;
    async sendConfirmation(ctx,internal){
        let resObj=ctx.request.body;
        if(!resObj || !resObj.email){
-          return false
+           if(internal==='internal'){
+               return false;
+           }
+           ctx.body=utilityService.response(ctx,400,'Email is required',['Email is required'],0);
+           return;
        }
        if(resObj && !resObj.firstname){
            try{
@@ -279,7 +282,11 @@ const version=1;
                    }
                });
            }catch(e){
-               return false;
+               if(internal==='internal'){
+                   return false;
+               }
+               ctx.body=utilityService.response(ctx,400,'Error occurred during verification',['Try again later'],0,[utilityService.canDebug(e)]);
+               return;
            }
        }
 
@@ -303,8 +310,9 @@ const version=1;
             if(internal==='internal'){
                 return false;
             }
-            ctx.body=utilityService.response(ctx,200,'Error occurred during verification',['Try again later'],1,[utilityService.canDebug(e)]);
+            ctx.body=utilityService.response(ctx,400,'Error occurred during verification',['Try again later'],1,[utilityService.canDebug(e)]);
         }
+
     }
 };
 

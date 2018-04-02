@@ -1,7 +1,3 @@
-/**
- * Created by shadow-viper on 3/22/18.
- */
-
 const tokenService=require('../services/token.service');
 const utilityService=require('../services/utility.service');
 const mailerService =require('../services/mailer.service');

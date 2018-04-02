@@ -1,6 +1,3 @@
-/**
- * Created by shadow-viper on 3/23/18.
- */
 const jwt=require('jsonwebtoken');
 const fs=require('fs');
 //const cert = fs.readFileSync('../sha/private.key');

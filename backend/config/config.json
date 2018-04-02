@@ -8,8 +8,6 @@
     "dialect": "mysql",
     "token":"SeLen24356Mtt",
     "email":{
-      "email":"info@discoverblockchain.io",
-      "password":"Blockchain-1.2",
       "port":"587",
       "host":"smtp.gmail.com",
       "secure":false,

@@ -1,0 +1,13 @@
+{
+  "name": "DiscoverBlockChain",
+  "version": "0.0.1",
+  "description":"Discoverblockchain api references",
+  "title": "DiscoverBlockChain API documentation",
+  "url" : "http://discoverblockchain.io:9488/v1",
+  "sampleUrl": "http://discoverblockchain.io:9488/v1",
+
+  "template": {
+    "withCompare": true,
+    "withGenerator": true
+  }
+}

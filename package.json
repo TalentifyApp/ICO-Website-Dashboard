@@ -19,12 +19,12 @@
     "bcrypt": "^1.0.3",
     "jsonwebtoken": "^8.2.0",
     "koa": "^2.5.0",
-    "koa-mailer": "^0.1.0",
     "koa-parser": "^1.0.4",
     "koa-router": "^7.4.0",
     "koa-static": "^4.0.2",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
+    "nodemailer": "^4.6.3",
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.37.3"

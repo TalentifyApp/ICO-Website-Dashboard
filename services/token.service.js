@@ -3,18 +3,19 @@
  */
 const jwt=require('jsonwebtoken');
 const fs=require('fs');
+const env=process.env.NODE_ENV || 'development';
 //const cert = fs.readFileSync('../sha/private.key');
 /*const publicKey = fs.readFileSync('../sha/public.pem');  // get public key*/
 
-const configService=require('../config/config.json')
+const configService=require('../config/config.json')[env]
 
-module.exports={
-    sign(data){
-        return jwt.sign(data, configService[process.env.NODE_ENV].token, { expiresIn: 60 * 60 });
+const TokenService={
+    sign(data,prolonged){
+        return jwt.sign(data, configService.token, { expiresIn: prolonged? (prolonged*60*60):(60*60) });
     },
     verify(token){
         return new Promise((resolve,reject)=>{
-            jwt.verify(token, configService[process.env.NODE_ENV].token, function(err, decoded) {
+            jwt.verify(token, configService.token, function(err, decoded) {
                 if(decoded){
                     resolve(decoded);
                 }
@@ -25,6 +26,11 @@ module.exports={
 
         });
 
+    },
+    currentTime(){
+        return Math.ceil(new Date().getTime()/1000);
+
     }
 
 }
+module.exports=TokenService;

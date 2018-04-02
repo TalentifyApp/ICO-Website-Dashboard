@@ -81,7 +81,12 @@
       ]
     },
     "filename": "controllers/auth.controller.js",
-    "groupTitle": "Authentication"
+    "groupTitle": "Authentication",
+    "sampleRequest": [
+      {
+        "url": "http://disoverblockchain.io:9488/v1/auth/confirm"
+      }
+    ]
   },
   {
     "type": "post",
@@ -105,18 +110,25 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "Email",
+            "field": "email",
             "description": "<p>Email must be unique</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "Password",
+            "field": "password",
             "description": "<p>Password must have min length of 6, one caps and one symbol</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "[json] Sample login",
+          "content": "{\n\"email\":\"martinchuka@discoverblockchain.com\",\n\"password\":\"nothing\"\n}",
+          "type": "json"
+        }
+      ]
     },
     "success": {
       "fields": {
@@ -165,11 +177,16 @@
       ]
     },
     "filename": "controllers/auth.controller.js",
-    "groupTitle": "Authentication"
+    "groupTitle": "Authentication",
+    "sampleRequest": [
+      {
+        "url": "http://disoverblockchain.io:9488/v1/auth/login"
+      }
+    ]
   },
   {
     "type": "post",
-    "url": "/auth/registration",
+    "url": "/auth/register",
     "title": "",
     "name": "Registration",
     "version": "0.0.1",
@@ -203,8 +220,8 @@
             "group": "Parameter",
             "type": "Date",
             "optional": false,
-            "field": "Date",
-            "description": "<p>of birth of the user</p>"
+            "field": "DOB",
+            "description": "<p>of the user</p>"
           },
           {
             "group": "Parameter",
@@ -217,7 +234,7 @@
             "group": "Parameter",
             "type": "Number",
             "optional": false,
-            "field": "Country",
+            "field": "country",
             "description": "<p>id from country table  see /country/list</p>"
           },
           {
@@ -231,18 +248,25 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "Email",
+            "field": "email",
             "description": "<p>Email must be unique</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "Password",
+            "field": "password",
             "description": "<p>Password must have min length of 6, one caps and one symbol</p>"
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "title": "Example parameter for registration",
+          "content": "{\n\"firstname\":\"martin\",\n\"lastname\":\"john\",\n\"middlename\":\"doe\",\n\"country\":1,\n\"state\":2,\n\"address\":\"inland town\",\n\"mobile\":8162558889,\n\"DOB\":\"2018-10-20\",\n\"email\":\"martinchuka@discoverblockchain.io\",\n\"password\":\"nothing\"\n}",
+          "type": "json"
+        }
+      ]
     },
     "success": {
       "fields": {
@@ -265,8 +289,8 @@
             "group": "Success 200",
             "type": "Date",
             "optional": false,
-            "field": "date",
-            "description": "<p>of birth Date of birth of the user</p>"
+            "field": "DOB",
+            "description": "<p>Date of birth of the user</p>"
           },
           {
             "group": "Success 200",
@@ -334,13 +358,18 @@
       "examples": [
         {
           "title": "Error Login in",
-          "content": "HTTP/1.1 501 unimplemented\n{\n\"status:\"error\",\n\"next\":\"Registration failed\",\n\"debug\":[\"provide a valid email\",\"username already exists\",\"password invalid\"]\n\"statusInt\":0,\n}",
+          "content": "HTTP/1.1 501 unimplemented\n{\n\"status:\"error\",\n\"next\":\"Registration failed\",\n\"debug\":[\"provide a valid email\",\"username already exists\",\"password invalid\",']\n\"statusInt\":0,\n}",
           "type": "json"
         }
       ]
     },
     "filename": "controllers/auth.controller.js",
-    "groupTitle": "Authentication"
+    "groupTitle": "Authentication",
+    "sampleRequest": [
+      {
+        "url": "http://disoverblockchain.io:9488/v1/auth/register"
+      }
+    ]
   },
   {
     "type": "post",
@@ -424,6 +453,11 @@
       ]
     },
     "filename": "controllers/auth.controller.js",
-    "groupTitle": "Authentication"
+    "groupTitle": "Authentication",
+    "sampleRequest": [
+      {
+        "url": "http://disoverblockchain.io:9488/v1/auth/sendConfirmation"
+      }
+    ]
   }
 ]

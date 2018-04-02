@@ -1,36 +1,35 @@
 /**
  * Created by shadow-viper on 3/25/18.
  */
-const koa_mailer=require('koa-mailer');
-const config=require('../config/config');
-const environment=process.env.NODE_ENV;
+const environment=process.env.NODE_ENV || 'development';
+const config=require('../config/config')[environment];;
+const nodemailer=require('nodemailer')
 module.exports={
     mail(to,subject,textBody,htmlBody){
-        const mailerOptions={
-            email: {
-                host: config[environment].email.host,
-                port: config[environment].email.port,
-                secure: config[environment].email.secure,
-                auth: {
-                    user: config[environment].email.email,
-                    pass: config[environment].email.password,
-                },
-            },
-            prefix: '/mailer',
-            validate: function (ctx) {
-                return config[environment].email.blacklisted.indexOf(ctx.ip) < 0;
-            },
-            handlers: {
-                '/notice': function () {
-                    return {
-                        to: to,
-                        subject: subject,
-                        html: htmlBody,
-                        text: textBody
-                    };
-                },
-            },
-        };
-        return koa_mailer(mailerOptions);
-    }
+        return new Promise((resolve,reject)=>{
+            // create reusable transporter object using the default SMTP transport
+            const transporter = nodemailer.createTransport(config.email);
+
+            // setup email data with unicode symbols
+            let mailOptions = {
+
+                from: config.email.auth.user, // sender address
+                to: to, // list of receivers
+                subject: subject, // Subject line
+                text: textBody, // plain text body
+                html: htmlBody // html body
+            };
+
+            // send mail with defined transport object
+            transporter.sendMail(mailOptions, (error, info) => {
+                if (error) {
+                    reject(error);
+                }
+               resolve(info);
+                // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+                // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+            });
+        })
+
+    },
 };

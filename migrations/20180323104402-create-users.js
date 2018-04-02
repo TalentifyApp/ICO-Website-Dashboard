@@ -11,6 +11,10 @@ module.exports = {
       firstname: {
         type: Sequelize.STRING
       },
+      email: {
+        type: Sequelize.STRING,
+          unique:true
+      },
       lastname: {
         type: Sequelize.STRING
       },
@@ -24,7 +28,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       address: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
+      },
+      status: {
+        type: Sequelize.INTEGER,
+          defaultValue:true
       },
       city: {
         type: Sequelize.STRING
@@ -33,7 +41,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       phone: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+          unique:true
       },
       password: {
         type: Sequelize.STRING

@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+@import './variables';
+@import './mixins';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~font-awesome/css/font-awesome.css';
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+a, .cp {
+  cursor: pointer;
+}
+
+.section-title {
+  font-size: 1.5em;
+  font-weight: 300;
+  padding: 1em 0 0;
+  text-align: center;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.progress-spinner {
+  height: 60px !important;
+  margin: 2em auto;
+}
+
+snack-bar-container {
+  background: map_get($colors, mid-blue) !important;
+}
+
+.mat-menu-content {
+  background: map_get($colors, mid-blue);
+}
+
+.mat-menu-item, .mat-menu-item .mat-icon {
+  color: map_get($colors, white);
+  font-weight: 100;
+}
+
+.hero-actions {
+  align-items: center;
+  display: flex;
+  padding-bottom: 1em;
+}
+
+.like-icon {
+  color: map_get($colors, red);
+  cursor: pointer;
+}
+
+.mat-raised-button[disabled] {
+  background: map_get($colors, light-gray) !important;
+}
+
+.mat-dialog-container {
+  background: map_get($colors, mid-blue);
+  color: map_get($colors, white);
+}
+
+.mat-dialog-content {
+  text-align: center;
+  padding: 1em 24px !important;
+}
+
+.mat-dialog-title {
+  text-align: center;
+}
+
+.mat-progress-bar-buffer {
+  background-color: map_get($colors, gray);
+}
+
+.hero-header-image {
+  background-size: cover;
+}
+
+.mat-card-image {
+  border-top: 1px solid #eee;
+  margin-bottom: -28px !important;
+}
+
+.mat-list-avatar {
+  height: 55px !important;
+  width: 55px !important;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.highcharts-axis-labels.highcharts-xaxis-labels {
+  display: none;
+}
+
+a.addressLink {
+  color: map_get($colors, lighter-blue) !important;
+}
+
+.spinnerElement {
+  width: 50px !important;
+  height: 50px !important;
+  display: table !important;
+  margin: 0 auto !important;
+
+  svg {
+    width: 50px !important;
+    height: 50px !important;
+    display: table !important;
+    margin: 0 auto !important;
+  }
+}
+
+.spinner-visible {
+  display: block;
+}
+
+.spinner-hidden {
+  display: none !important;
+}

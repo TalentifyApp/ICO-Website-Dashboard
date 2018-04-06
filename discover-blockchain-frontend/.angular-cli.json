@@ -19,9 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "assets/css/styles.scss",
-        "assets/css/reset.scss",
-        "assets/css/loading.scss",
+        "assets/scss/styles.scss",
+        "assets/scss/reset.scss",
+        "assets/scss/loading.scss",
         "../node_modules/bootstrap/dist/css/bootstrap.css"
       ],
       "stylePreprocessorOptions": {

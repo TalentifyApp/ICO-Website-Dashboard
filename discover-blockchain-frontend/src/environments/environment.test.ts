@@ -1,7 +1,7 @@
 export const environment = {
-    production: true,
+    production: false,
     development: false,
-    testing: false,
+    testing: true,
     enableCurrentMode: () => {
     }
 };

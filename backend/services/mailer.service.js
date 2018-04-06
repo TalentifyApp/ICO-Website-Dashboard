@@ -1,6 +1,3 @@
-/**
- * Created by shadow-viper on 3/25/18.
- */
 const koa_mailer=require('koa-mailer');
 const config=require('../config/config');
 const environment=process.env.NODE_ENV;

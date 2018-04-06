@@ -1,8 +1,3 @@
-/**
- * Created by shadow-viper on 3/22/18.
- */
-
-
 const Router=require('koa-router');
 const router=new Router();
 

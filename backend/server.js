@@ -1,7 +1,3 @@
-/**
- * Created by shadow-viper on 3/22/18.
- */
-
 const Koa=require('koa');
 const Parser= require('koa-parser');
 const statics =require('koa-static');

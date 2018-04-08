@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {APP_CONFIG, AppConfig} from './config/app.config';
+import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
@@ -14,6 +15,13 @@ import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {SidebarComponent} from './components/sidebar/sidebar.component';
+import {AlertComponent} from './directives/alert.component';
+import {AuthGuard} from './guards/auth.guard';
+import {AlertService} from './services/alert/alert.service';
+import {AuthenticationService} from './services/authentication/authentication.service';
+import {UserService} from './services/user/user.service';
+import {JwtInterceptorProvider} from './helpers/jwt.interceptor';
+import {ErrorInterceptorProvider} from './helpers/error.interceptor';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -30,10 +38,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
@@ -45,7 +55,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   providers: [
-    {provide: APP_CONFIG, useValue: AppConfig}
+    {provide: APP_CONFIG, useValue: AppConfig},
+    AuthGuard,
+    AlertService,
+    AuthenticationService,
+    UserService,
+    JwtInterceptorProvider,
+    ErrorInterceptorProvider
   ],
   bootstrap: [AppComponent]
 })

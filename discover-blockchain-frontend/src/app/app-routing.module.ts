@@ -6,6 +6,7 @@ import {SignUpComponent} from './components/sign-up/sign-up.component';
 import {ForgotPasswordComponent} from './components/forgot-password/forgot-password.component';
 import {ConfirmSignUpComponent} from './components/confirm-sign-up/confirm-sign-up.component';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
+import {AuthGuard} from './guards/auth.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -14,7 +15,7 @@ const routes: Routes = [
   {path: 'sign-up', component: SignUpComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'confirm-sign-up', component: ConfirmSignUpComponent},
-  {path: 'dashboard', component: DashboardComponent},
+  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   // otherwise redirect to 404
   {path: '**', redirectTo: '/' + AppConfig.routes.error404}
 ];

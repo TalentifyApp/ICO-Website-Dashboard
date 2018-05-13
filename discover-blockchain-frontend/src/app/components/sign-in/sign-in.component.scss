@@ -1,3 +1,51 @@
 app-sign-in {
 
+  .container {
+
+    h2 {
+      text-align: center;
+    }
+
+    .form-group {
+
+      .username-field,
+      .password-field {
+        display: flex;
+
+        .fa-user,
+        .fa-lock {
+          border-right: 0;
+          padding: 0.375rem 0.75rem;
+          font-size: 1rem;
+          line-height: 1.5;
+          color: #495057;
+          background-color: #fff;
+          background-clip: padding-box;
+          border: 1px solid #ced4da;
+          border-radius: 0.25rem;
+          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          margin-right: -10px;
+        }
+
+        .form-control {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-left: 0;
+        }
+      }
+
+      .help-block {
+        text-align: center;
+        padding-top: 10px;
+        background: #dc3545;
+        color: white;
+        width: 60%;
+        margin: 10px auto;
+        padding-bottom: 10px;
+        border-radius: 4px;
+      }
+    }
+  }
+
 }
+

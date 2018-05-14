@@ -1,3 +1,12 @@
+@import '../../../assets/scss/variables.scss';
+
 app-footer {
+
+  .text-center {
+
+    p {
+      color: map_get($colors, white)
+    }
+  }
 
 }

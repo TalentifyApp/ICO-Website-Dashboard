@@ -19,14 +19,22 @@ export class SignInComponent implements OnInit {
               private alertService: AlertService) {
   }
 
+
   ngOnInit() {
-    // reset login status
+    /**
+     * Reset login status
+     */
     this.authenticationService.logout();
 
-    // get return url from route parameters or default to '/'
+    /**
+     * Get return URL from route parameters or default to '/'
+     */
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
+  /**
+   * Login function
+   */
   login() {
     this.loading = true;
     this.authenticationService.login(this.model.username, this.model.password)

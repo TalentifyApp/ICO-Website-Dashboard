@@ -20,6 +20,9 @@ export class SignUpComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Register function
+   */
   register() {
     this.loading = true;
     this.userService.create(this.model)

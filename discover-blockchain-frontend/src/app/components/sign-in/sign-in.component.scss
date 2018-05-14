@@ -6,8 +6,8 @@ app-sign-in {
     padding-top: 160px;
 
     h2 {
-      text-align: center;
       color: map_get($colors, white);
+      text-align: center;
     }
 
     .form-group {
@@ -18,35 +18,35 @@ app-sign-in {
 
         .fa-user,
         .fa-lock {
-          border-right: 0;
-          padding: 0.375rem 0.75rem;
-          font-size: 1rem;
-          line-height: 1.5;
-          color: map_get($colors, trout-gray);
           background-color: map_get($colors, white);
           background-clip: padding-box;
           border: 1px solid map_get($colors, ghost-gray);
           border-radius: 0.25rem;
-          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          border-right: 0;
+          color: map_get($colors, trout-gray);
+          font-size: 1rem;
+          line-height: 1.5;
           margin-right: -10px;
+          padding: 0.375rem 0.75rem;
+          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
         }
 
         .form-control {
-          border-top-left-radius: 0;
           border-bottom-left-radius: 0;
           border-left: 0;
+          border-top-left-radius: 0;
         }
       }
 
       .help-block {
-        text-align: center;
-        padding-top: 10px;
         background: map_get($colors, warning-red);
+        border-radius: 4px;
         color: map_get($colors, white);
-        width: 60%;
         margin: 10px auto;
         padding-bottom: 10px;
-        border-radius: 4px;
+        padding-top: 10px;
+        text-align: center;
+        width: 60%;
       }
     }
 
@@ -55,28 +55,28 @@ app-sign-in {
       flex-direction: column;
 
       .login-btn {
-        color: map_get($colors, rhino-blue);
         background: map_get($colors, white);
         border: 1px solid map_get($colors, white);
+        color: map_get($colors, rhino-blue);
         padding: 10px;
       }
 
       .login-btn:hover {
-        color: map_get($colors, white);
         background: map_get($colors, steel-blue);
         border: 1px solid map_get($colors, steel-blue);
+        color: map_get($colors, white);
       }
 
       .register-btn {
+        border: 1px solid map_get($colors, white);
         color: map_get($colors, white);
         margin-top: 10px;
-        border: 1px solid map_get($colors, white);
       }
 
       .register-btn:hover {
         background: map_get($colors, warning-red);
-        color: map_get($colors, white);
         border: 1px solid map_get($colors, warning-red);
+        color: map_get($colors, white);
       }
 
     }

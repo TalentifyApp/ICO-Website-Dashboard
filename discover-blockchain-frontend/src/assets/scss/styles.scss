@@ -3,7 +3,15 @@
 @import './mixins';
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '~font-awesome/css/font-awesome.css';
+@import '../../app/components/confirm-sign-up/confirm-sign-up.component';
+@import '../../app/components/dashboard/dashboard.component';
+@import '../../app/components/footer/footer.component';
+@import '../../app/components/forgot-password/forgot-password.component';
+@import '../../app/components/header/header.component';
+@import '../../app/components/sidebar/sidebar.component';
 @import '../../app/components/sign-in/sign-in.component';
+@import '../../app/components/sign-up/sign-up.component';
+
 
 * {
   font-family: 'Roboto', sans-serif;

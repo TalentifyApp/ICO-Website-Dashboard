@@ -3,9 +3,11 @@
 app-sign-in {
 
   .container {
+    padding-top: 160px;
 
     h2 {
       text-align: center;
+      color: map_get($colors, white);
     }
 
     .form-group {
@@ -61,7 +63,20 @@ app-sign-in {
 
       .login-btn:hover {
         color: map_get($colors, white);
-        background: map_get($colors, rhino-blue);
+        background: map_get($colors, steel-blue);
+        border: 1px solid map_get($colors, steel-blue);
+      }
+
+      .register-btn {
+        color: map_get($colors, white);
+        margin-top: 10px;
+        border: 1px solid map_get($colors, white);
+      }
+
+      .register-btn:hover {
+        background: map_get($colors, warning-red);
+        color: map_get($colors, white);
+        border: 1px solid map_get($colors, warning-red);
       }
 
     }

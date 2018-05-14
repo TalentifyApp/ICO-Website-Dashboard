@@ -1,3 +1,58 @@
+@import "../../../assets/scss/variables";
+
 app-sign-up {
 
+  .container {
+    margin: 0 auto;
+    padding-top: 160px;
+
+    h2 {
+      text-align: center;
+      color: map_get($colors, white);
+    }
+
+    .form-group {
+
+      .help-block {
+        text-align: center;
+        padding-top: 10px;
+        background: map_get($colors, warning-red);
+        color: map_get($colors, white);
+        width: 60%;
+        margin: 10px auto;
+        padding-bottom: 10px;
+        border-radius: 4px;
+      }
+    }
+
+    .register-buttons {
+      display: flex;
+      flex-direction: column;
+
+      .register-btn {
+        color: map_get($colors, rhino-blue);
+        background: map_get($colors, white);
+        border: 1px solid map_get($colors, white);
+        padding: 10px;
+      }
+
+      .register-btn:hover {
+        color: map_get($colors, white);
+        background: map_get($colors, steel-blue);
+        border: 1px solid map_get($colors, steel-blue);
+      }
+
+      .cancel-btn {
+        color: map_get($colors, white);
+        margin-top: 10px;
+        border: 1px solid map_get($colors, white);
+      }
+
+      .cancel-btn:hover {
+        background: map_get($colors, warning-red);
+        color: map_get($colors, white);
+        border: 1px solid map_get($colors, warning-red);
+      }
+    }
+  }
 }

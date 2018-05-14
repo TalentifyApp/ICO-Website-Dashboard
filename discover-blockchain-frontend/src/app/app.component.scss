@@ -6,5 +6,10 @@ app-root {
 }
 
 .form {
-  margin:  0 auto;
+  margin: 0 auto;
+}
+
+.jumbotron {
+  background: rgb(24, 40, 72);
+  //background: linear-gradient(90deg, rgb(24, 40, 72) 0%, rgb(24, 40, 72) 0%, rgb(75, 108, 183) 100%, rgb(75, 108, 183) 100%) !important;
 }

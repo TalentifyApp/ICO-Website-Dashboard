@@ -45,6 +45,11 @@ app-sign-in {
         border-radius: 4px;
       }
     }
+
+    .login-buttons {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
 }

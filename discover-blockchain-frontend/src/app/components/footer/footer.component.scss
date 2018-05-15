@@ -5,7 +5,11 @@ app-footer {
   .text-center {
 
     p {
-      color: map_get($colors, white)
+      color: map_get($colors, white);
+
+      a {
+        color: map_get($colors, white);
+      }
     }
   }
 

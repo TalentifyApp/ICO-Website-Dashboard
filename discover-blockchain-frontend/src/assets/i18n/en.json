@@ -12,5 +12,6 @@
   "last-name": "Last Name",
   "last-name-warning": "Last Name is required",
   "cancel": "Cancel",
-  "copyright": "Copyright 2018 - DiscoverBlockchain"
+  "copyright": "Copyright 2018 - DiscoverBlockchain",
+  "website": "discoverblockchain.io"
 }

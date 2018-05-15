@@ -17,12 +17,14 @@ import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {SidebarComponent} from './components/sidebar/sidebar.component';
 import {AlertComponent} from './directives/alert.component';
+import {NavigationComponent} from './components/navigation/navigation.component';
 import {AuthGuard} from './guards/auth.guard';
 import {AlertService} from './services/alert/alert.service';
 import {AuthenticationService} from './services/authentication/authentication.service';
 import {UserService} from './services/user/user.service';
 import {JwtInterceptorProvider} from './helpers/jwt.interceptor';
 import {ErrorInterceptorProvider} from './helpers/error.interceptor';
+import { BlankComponentComponent } from './components/blank-layout/blank-layout.component';
 
 /**
  * AoT requires an exported function for factories
@@ -42,7 +44,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    AlertComponent
+    AlertComponent,
+    NavigationComponent,
+    BlankComponentComponent,
   ],
   imports: [
     BrowserModule,

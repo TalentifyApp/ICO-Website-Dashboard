@@ -1,0 +1,7 @@
+@import '../../../assets/scss/variables';
+
+app-navigation {
+  p {
+    color: map_get($colors, white);
+  }
+}

@@ -30,6 +30,8 @@ export class SignInComponent implements OnInit {
      * Get return URL from route parameters or default to '/'
      */
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+
+
   }
 
   /**

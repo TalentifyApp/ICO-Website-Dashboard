@@ -7,6 +7,8 @@ import {ForgotPasswordComponent} from './components/forgot-password/forgot-passw
 import {ConfirmSignUpComponent} from './components/confirm-sign-up/confirm-sign-up.component';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {AuthGuard} from './guards/auth.guard';
+import {NavigationComponent} from "./components/navigation/navigation.component";
+import {BlankComponentComponent} from "./components/blank-layout/blank-layout.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -15,7 +17,15 @@ const routes: Routes = [
   {path: 'sign-up', component: SignUpComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'confirm-sign-up', component: ConfirmSignUpComponent},
-  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+  //{path: 'dashboard', component: DashboardComponent/*, canActivate: [AuthGuard] */},
+  {path: 'navigation', component: NavigationComponent},
+
+  {
+    path: '', component: BlankComponentComponent,
+    children: [
+      {path: 'dashboard', component: DashboardComponent}
+    ]
+  },
   /**
    * Otherwise redirect to 404
    */

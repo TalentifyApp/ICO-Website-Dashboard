@@ -1,12 +1,12 @@
 @import './variables';
-
+@import './variables';
 html {
   height: 100%;
 }
 
 body {
   min-height: 100%;
-  background: #182848 !important;
+  background: map_get($colors, rhino-blue) !important;
 }
 
 .loading-page {

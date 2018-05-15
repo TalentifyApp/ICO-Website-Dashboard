@@ -1,3 +1,7 @@
 {
-  "title": "Discover Blockchain"
+  "title": "Discover Blockchain",
+  "login": "Login",
+  "username": "Username",
+  "password": "Password",
+  "not-register": "Not registered? Register"
 }

@@ -13,5 +13,8 @@
   "last-name-warning": "Last Name is required",
   "cancel": "Cancel",
   "copyright": "Copyright 2018 - DiscoverBlockchain",
-  "website": "discoverblockchain.io"
+  "website": "discoverblockchain.io",
+  "reset-password": "Reset Password",
+  "email-placeholder": "Enter email",
+  "send-reset-link": "Send password reset link"
 }

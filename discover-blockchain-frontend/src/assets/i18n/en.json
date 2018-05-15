@@ -1,7 +1,16 @@
 {
   "title": "Discover Blockchain",
   "login": "Login",
+  "register": "Register",
   "username": "Username",
+  "username-warning": "Username is required",
   "password": "Password",
-  "not-register": "Not registered? Register"
+  "password-warning": "Password is required",
+  "not-registered": "Not registered? Register",
+  "first-name": "First Name",
+  "first-name-warning": "First Name is required",
+  "last-name": "Last Name",
+  "last-name-warning": "Last Name is required",
+  "cancel": "Cancel",
+  "copyright": "Copyright 2018 - DiscoverBlockchain"
 }

@@ -12,6 +12,9 @@ export class DashboardComponent implements OnInit {
   users: User[] = [];
 
   constructor(private userService: UserService) {
+    /**
+     * Return current user
+     */
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
   }
 
@@ -19,12 +22,18 @@ export class DashboardComponent implements OnInit {
     this.loadAllUsers();
   }
 
+  /**
+   * Delete user functionality
+   */
   deleteUser(_id: string) {
     this.userService.delete(_id).subscribe(() => {
       this.loadAllUsers()
     });
   }
 
+  /**
+   * Show all users
+   */
   private loadAllUsers() {
     this.userService.getAll().subscribe(users => {
       this.users = users;

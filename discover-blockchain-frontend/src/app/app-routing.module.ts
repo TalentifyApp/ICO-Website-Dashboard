@@ -16,7 +16,9 @@ const routes: Routes = [
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'confirm-sign-up', component: ConfirmSignUpComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
-  // otherwise redirect to 404
+  /**
+   * Otherwise redirect to 404
+   */
   {path: '**', redirectTo: '/' + AppConfig.routes.error404}
 ];
 

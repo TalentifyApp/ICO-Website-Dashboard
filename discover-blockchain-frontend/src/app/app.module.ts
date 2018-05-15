@@ -24,7 +24,9 @@ import {UserService} from './services/user/user.service';
 import {JwtInterceptorProvider} from './helpers/jwt.interceptor';
 import {ErrorInterceptorProvider} from './helpers/error.interceptor';
 
-// AoT requires an exported function for factories
+/**
+ * AoT requires an exported function for factories
+ */
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }

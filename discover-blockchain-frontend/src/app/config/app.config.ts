@@ -8,8 +8,15 @@ export const AppConfig = {
     error404: '404'
   },
   api: {
-    main: '', // main api path
-    local: '' // local api path
+    /**
+     * Main API path
+     */
+    main: '',
+
+    /**
+     * Local API path
+     */
+    local: ''
   },
   repositoryURL: 'https://github.com/DiscoverBlockchain/ICO-Website-Dashboard'
 };

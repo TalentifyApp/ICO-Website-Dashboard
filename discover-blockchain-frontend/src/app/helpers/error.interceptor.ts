@@ -7,7 +7,9 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    // extract error message from http body if an error occurs
+    /**
+     * Extract error message from http body if an error occurs
+     */
     return next.handle(request).catch(errorResponse => {
       return Observable.throw(errorResponse.error)
     });

@@ -24,6 +24,7 @@ import {UserService} from './services/user/user.service';
 import {JwtInterceptorProvider} from './helpers/jwt.interceptor';
 import {ErrorInterceptorProvider} from './helpers/error.interceptor';
 
+
 /**
  * AoT requires an exported function for factories
  */

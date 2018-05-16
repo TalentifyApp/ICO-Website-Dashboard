@@ -1,7 +1,27 @@
 @import '../../../assets/scss/variables';
 
 app-navigation {
+
+  position: fixed;
+  left: 0;
+  background: map_get($colors, warning-red);
+  width: 20%;
+  height: 100%;
+  border-right: 2px solid map_get($colors, white);
+
   p {
     color: map_get($colors, white);
   }
+
+  .sidenav {
+
+    a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: map_get($colors, white);
+      display: block;
+    }
+  }
+
 }

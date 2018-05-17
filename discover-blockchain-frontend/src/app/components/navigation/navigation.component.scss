@@ -4,27 +4,51 @@ app-navigation {
 
   position: fixed;
   left: 0;
-  background: map_get($colors, warning-red);
+  background: linear-gradient(90deg, rgb(24, 40, 72) 0%, rgb(24, 40, 72) 0%, rgb(75, 108, 183) 100%, rgb(75, 108, 183) 100%);
   width: 20%;
   top: 0;
   height: 100%;
-  border-right: 2px solid map_get($colors, white);
+  z-index: 1;
+  box-shadow: 3px 0px 40px -10px rgba(0, 0, 0, 0.6);
+
+  .logo-img {
+    text-align: center;
+    padding-top: 50px;
+
+    img {
+      width: 70%;
+    }
+  }
 
   p {
     color: map_get($colors, white);
   }
 
+  .dash {
+    padding-top: 50px;
+  }
+
   .sidenav {
+    padding-top: 50px;
+  }
+  .sidenav,
+  .dash {
     width: 100%;
     text-align: center;
-    padding-top: 150px;
 
     a {
-      padding: 6px 8px 6px 16px;
+      padding: 12px;
       text-decoration: none;
-      font-size: 25px;
       color: map_get($colors, white);
       display: block;
+      background: transparent;
+      border: 1px solid #ffffff;
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    a:hover {
+      background: map_get($colors, big-stone-blue);
     }
   }
 

@@ -12,9 +12,13 @@ app-dashboard {
 
   .container {
     width: 100%;
+    margin-left: 0;
 
-    h1 {
-      color: map_get($colors, white);
+    .first-box,
+    .second-box,
+    .third-box {
+      padding: 10px;
+      border: 1px solid #000;
     }
   }
 

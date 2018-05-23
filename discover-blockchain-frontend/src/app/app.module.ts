@@ -24,7 +24,7 @@ import {AuthenticationService} from './services/authentication/authentication.se
 import {UserService} from './services/user/user.service';
 import {JwtInterceptorProvider} from './helpers/jwt.interceptor';
 import {ErrorInterceptorProvider} from './helpers/error.interceptor';
-import { BlankComponentComponent } from './components/blank-layout/blank-layout.component';
+import {BlankComponentComponent} from './components/blank-layout/blank-layout.component';
 
 /**
  * AoT requires an exported function for factories
@@ -46,7 +46,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SidebarComponent,
     AlertComponent,
     NavigationComponent,
-    BlankComponentComponent,
+    BlankComponentComponent
   ],
   imports: [
     BrowserModule,

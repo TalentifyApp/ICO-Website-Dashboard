@@ -10,7 +10,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 export class ForgotPasswordComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
-              private router: Router,) {
+              private router: Router) {
   }
 
   ngOnInit() {

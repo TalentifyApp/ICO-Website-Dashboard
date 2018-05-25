@@ -1,0 +1,32 @@
+@import '../../../assets/scss/variables.scss';
+
+app-top-bar {
+  position: fixed;
+  left: 20%;
+  background: map_get($colors, white);
+  width: 80%;
+  top: 0;
+  border-bottom: 2px solid map_get($colors, ghost-gray);
+
+  .navbar {
+    float:right;
+
+    .navbar-top-links {
+      .welcome-top-message {
+        margin-right: 100px;
+      }
+      .notification-item {
+        margin-right: 100px;
+      }
+
+      .log-out {
+        color: map_get($colors, black);
+      }
+    }
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+}

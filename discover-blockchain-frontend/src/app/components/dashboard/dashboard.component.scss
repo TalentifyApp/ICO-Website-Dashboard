@@ -6,20 +6,64 @@ app-dashboard {
   left: 20%;
   background: map_get($colors, white);
   width: 80% !important;
-  top: 0;
+  top: 7%;
   height: 100%;
   border-right: 2px solid map_get($colors, white);
 
   .container {
     width: 100%;
+    margin-top: 10px;
     margin-left: 0;
 
-    .first-box,
-    .second-box,
-    .third-box {
-      padding: 10px;
-      border: 1px solid #000;
+    .dashboard-boxes {
+      display: flex;
+
+      .first-box {
+        .registered-users {
+          display: flex;
+
+          h4 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+          }
+
+        }
+      }
+
+      .second-box {
+        .token-balance {
+          display: flex;
+
+          h4 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .third-box {
+        .price-calculation {
+          display: flex;
+        }
+
+        h4 {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          margin-left: 10px;
+        }
+      }
+      .first-box,
+      .second-box,
+      .third-box {
+        padding: 10px;
+        border: 1px solid #000;
+        width: 100%;
+        margin-right: 10px;
+      }
     }
+
   }
 
 }

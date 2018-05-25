@@ -25,6 +25,7 @@ import {UserService} from './services/user/user.service';
 import {JwtInterceptorProvider} from './helpers/jwt.interceptor';
 import {ErrorInterceptorProvider} from './helpers/error.interceptor';
 import {BlankComponentComponent} from './components/blank-layout/blank-layout.component';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
 
 /**
  * AoT requires an exported function for factories
@@ -46,7 +47,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SidebarComponent,
     AlertComponent,
     NavigationComponent,
-    BlankComponentComponent
+    BlankComponentComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,

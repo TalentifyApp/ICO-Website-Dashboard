@@ -9,6 +9,7 @@ import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {AuthGuard} from './guards/auth.guard';
 import {NavigationComponent} from "./components/navigation/navigation.component";
 import {BlankComponentComponent} from "./components/blank-layout/blank-layout.component";
+import {TopBarComponent} from "./components/top-bar/top-bar.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'confirm-sign-up', component: ConfirmSignUpComponent},
   //{path: 'dashboard', component: DashboardComponent/*, canActivate: [AuthGuard] */},
   {path: 'navigation', component: NavigationComponent},
+  {path: 'top-bar', component: TopBarComponent},
 
   {
     path: '', component: BlankComponentComponent,

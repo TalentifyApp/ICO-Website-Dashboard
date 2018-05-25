@@ -21,7 +21,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.loadAllUsers();
   }
-
   /**
    * Delete user functionality
    */

@@ -9,4 +9,21 @@ app-my-account {
   top: 7%;
   height: 100%;
   border-right: 2px solid map_get($colors, white);
+
+  .main-content {
+    padding-top: 50px;
+  }
+
+  .header {
+    margin-left: 10px;
+  }
+
+  .author {
+    text-align: center;
+  }
+
+  .form-group {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }

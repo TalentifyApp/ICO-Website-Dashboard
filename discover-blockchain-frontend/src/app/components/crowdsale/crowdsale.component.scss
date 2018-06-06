@@ -1,0 +1,12 @@
+@import '../../../assets/scss/variables.scss';
+
+app-crowdsale {
+
+  position: fixed;
+  left: 20%;
+  background: map_get($colors, white);
+  width: 80% !important;
+  top: 7%;
+  height: 100%;
+  border-right: 2px solid map_get($colors, white);
+}

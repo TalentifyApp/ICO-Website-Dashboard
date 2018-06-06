@@ -25,7 +25,12 @@ import {UserService} from './services/user/user.service';
 import {JwtInterceptorProvider} from './helpers/jwt.interceptor';
 import {ErrorInterceptorProvider} from './helpers/error.interceptor';
 import {BlankComponentComponent} from './components/blank-layout/blank-layout.component';
-import { TopBarComponent } from './components/top-bar/top-bar.component';
+import {TopBarComponent} from './components/top-bar/top-bar.component';
+import {TokenBuyComponent} from './components/token-buy/token-buy.component';
+import {CrowdsaleComponent} from './components/crowdsale/crowdsale.component';
+import {ReferralsComponent} from './components/referrals/referrals.component';
+import {BountiesComponent} from './components/bounties/bounties.component';
+import {MyAccountComponent} from './components/my-account/my-account.component';
 
 /**
  * AoT requires an exported function for factories
@@ -48,7 +53,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     AlertComponent,
     NavigationComponent,
     BlankComponentComponent,
-    TopBarComponent
+    TopBarComponent,
+    TokenBuyComponent,
+    CrowdsaleComponent,
+    ReferralsComponent,
+    BountiesComponent,
+    MyAccountComponent
   ],
   imports: [
     BrowserModule,
